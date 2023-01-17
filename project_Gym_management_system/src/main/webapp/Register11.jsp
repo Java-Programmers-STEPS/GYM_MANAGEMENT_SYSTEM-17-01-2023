@@ -1,0 +1,244 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<style>
+
+*{box-sizing: border-box;
+}
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+textarea{
+    width:45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+h1{
+    font-family: Arial;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+}
+input[type=submit]:hover {
+background-color: #32a336;
+}
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 20px;
+}
+.col-10{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-90{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .col-10,.col-90,input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Responsive Registaration Form</title>
+        <link rel="stylesheet" href="./responsiveRegistration.css">
+        <script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script>
+    </head>
+       
+    <body>
+        <h1>User Join Page</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="fname">Your first name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="lname">Your last name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-10">
+                    <label for="dob">Age:</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="dob" name="dob">
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-10">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" name="gender" value="male"/>Male
+                    <input type="radio" id="female" name="gender" value="female"/>Female
+                                        <input type="radio" id="other" name="gender" value="other"/>Other
+    
+                </div>
+            </div>
+            <div class="col-90">
+                    <select name="blood group" id="blood group">
+                        <option value="blood group">Blood Group:</option>
+                        <option value="A">A</option>
+                        <option value="B">B.</option>
+                        <option value="AB">AB.</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
+                </div>
+            </div>
+           
+           
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,.">
+                </div>
+            </div>  
+          
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">City:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="city" name="city" maxlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="pincode">Area PIN:</label>
+                </div>
+                <div class="col-90">
+                    <input type="number" id="pin" name="pin" maxlength="6">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="state">State:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="state" name="state">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="qualification" required >Qualification:</label>
+                </div>
+                <div class="col-90">
+                <label for="Blood group">Blood group:</label>
+                    <select name="blood group" id="blood group">
+                        <option value=" ">Select Blood group:</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="specialization">Specialization:</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" class="specialization" id="cs" name="specialization[]" value="Computer Science">Computer Science<br/>
+                    <input type="checkbox" class="specialization" id="it" name="specialization[]" value="Information Technology">Information Technology<br/>
+                    <input type="checkbox" class="specialization" id="ca" name="specialization[]" value="Computer Architecture">Computer Architecture<br/>
+                    <input type="checkbox" class="specialization" id="tc" name="specialization[]" value="Tele Communication">Tele Communication<br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="password" name="password" maxlength="8">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Registered" onclick="SaveStudentDetails()">
+            </div>  
+        </div>  
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</html>
